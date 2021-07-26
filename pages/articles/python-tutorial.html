@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="../static/articles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<h1>Python Basics</h1>
+  <h2>Explained by AmoghTheCool</h2>
+	<h3>Variables</h3>
+	You can think of variables as a box that can hold items, and can reference the items inside it. To put an item, and only
+	one item, into that box, you can use the <code>=</code> operator. For example,<br><code>myVariable = myVal</code><br>The item (again in the box analogy) can be of multiple types - <code>string</code> (text or a string of characters, made with putting the text within quotes ("")), <code>int</code> (any natural number, plainly typed out with no notation), <code>bool</code> (True or False no notation), <code>float </code> (decimals "floating" between natural numbers also no notation) and more! There are things also called Collections, which are collections (or a group of) items. Some types of collections are <code>list</code> and <code>dict</code>. Lists can be formed using square brackets (<code>[</code> and <code>]</code>) with items inside the brackets separated with commas. One example is<br><code>
+    helloWorld = ["hello", "world", "!"]  
+    </code><br>
+    You can get items from the list using square brackets and the index (the index starts from 0 being the first element).<code> helloWorld[0]</code> will be <code>"hello"</code>, <code> helloWorld[1]</code> will be <code>"world"</code>, <code> helloWorld[2]</code> will be <code>"!"</code>. 
+    <br>A dict is short for a dictionary (or map). So, in essence, a dictionary is a list of words side-by-side with a list of definitions, right? What if there was a way to access the definition, using the word, without comparing seperate list indexes etc...
+    To construct a dict, just put 2 flower brackets ({}).
+    <br><code>
+      myDict = {}
+      </code> 
+    Dicts are mainly two parts - key and value. In python, you request the value from the dict using the key. To create a pair like this, put square brackets around the key and then put the = sign, then following that the value. <br>
+    <code>
+      myDict['hello'] = 'world!'
+    </code><br>
+    And then <code>myDict['hello']</code> would give me <code>'world!'</code>. 
+    <br><h3>Printing</h3><br>
+    Printing is a core feature of Python. It allows you to output values into what is called the <code>console</code>. It should look something like this:<br>
+    <img src = './static/assets/python-tutorial/console-look.jpg' height = '500'> </img><br>
+    Using the <code>print</code> keyword, you can put text/int/decimal/every other python type into the console.<br>
+    <code>
+      myList = ['hello', 'world']<br>
+      myBool = True<br>
+      myOtherBool = False<br>
+      myInt = 4<br>
+      myString = 'ooooooof'<br>
+      myFloat = 4.23<br>
+      myDict = {}<br>
+      myDict['hello'] = 'world'<br>
+
+      print(myList)<br>
+      print(myBool)<br>
+      print(myOtherBool)<br>
+      print(myInt)<br>
+      print(myString)<br>
+      print(myFloat)<br>
+      print(myDict)<br>
+    </code><br>
+    Console:<br>
+    <code>
+      ['hello', 'world']<br>
+      True<br>
+      False<br>
+      4<br>
+      'ooooooof'<br>
+      4.23<br>
+      {'hello':'world'}<br>
+    </code>
+    <h3>Operators</h3>
+    Operators are basically things like +, -, * (which is times in computers), /, % (modulo operator).
+    <br> 
+    <h4>String operators</h4>
+    You can multiply strings with numbers (specifically ints) to multiply the string. e.g.,
+    <br><code>
+      print("AmoghTheCool is awesome!" * 5)
+    </code>
+    <br> and the output would be <br>
+    <code>
+      AmoghTheCool is awesome!AmoghTheCool is awesome!AmoghTheCool is awesome!AmoghTheCool is awesome!AmoghTheCool is awesome!
+    </code>
+    <br>You can also concatenate (basically sticking 2 strings together) using the + sign. <br>
+    <code>
+      print("hello"+" world")
+    </code><br> would be <code>hello world</code>
+    <h4>Int & Float operators</h4>
+    + adds the Int or Float behind it to the Int or Float in front of it. - subtracts the Int or Float behind it from the Int or Float in front of it. * multiplies the Int or Float behind it to the Int or Float in front of it. / divides the Int or Float behind it by the Int or Float in front of it.
+    <script src="script.js"></script>
+    Booleans, however, do not have operators.
+    <h3>Functions</h3>
+    Functions are hard to explain, but in a nutshell they are processes that do not have to be manually repeated. To create a function, just use the <code>def</code> keyword followed by a colon.<br>
+    <code>
+      def myFunc():<br>
+        print('harry potter is awesome')  
+    </code><br>
+    So instead of saying <code>print('harry potter is awesome')</code> manually, we can just call the function using parantheses. <br>
+    <code><
+      myFunc()
+      myFunc()
+      myFunc()
+      myFunc()
+      myFunc()
+    </code><br>
+    But what if we want to slightly (or majorly) change what the function does, without creating a new one? Then we can use Parameters. So when you are defining the function, inside the parantheses, write the parameters' names, separated with commas.<br>
+    <code>
+      def myFunc(char_name):<br>
+        print(char_name+' is awesome')
+    </code><br>I could also <code>return</code> a value, like 3 or 2 or "Foobar". However returning a value breaks out of the function, meaning that any code after the return is unnecessary.
+    <h3>Ifs and Conditionals</h3>
+    If statements do some code if the boolean condition given to them is True. So, I could do:<br>
+    <code>
+      if True:<br>
+        print('I have been run!')
+    </code><br>
+    That will run. What if we want to do something when the boolean ISN'T True, then we use the <code>else</code> keyword.
+    <br><code>
+      if False:<br>
+        print('lol')<br>
+      else:<br>
+        print('lollypopp')
+      </code><br>
+      Lollypopp will print out. To modify Booleans, just use the keywords <code>not</code>, <code>and</code>, and <code>or </code>. <code>not</code> reverses the boolean in front of it - <code>not True</code> means False and <code>not False</code> means True. And means, if the bool behind the keyword <code>and</code> is True and the bool in front is True too, then return True. Else, return False. <code>or </code> is simply "return True if any one of the conditions given is True". So <code>True or False</code> will return True.
+    <h3>Input</h3>
+    To take input from the console, just call the <code>input</code> function, and enter the prompt inside the single parameter.<br><code> 
+      name = input('What is your name?')<br>
+      print(name)<br>
+    </code>
+    <h3>Loops</h3>
+    <h4>For loops</h4>
+    For loops iterate through a string or list using an iterator. Generally that iterator is called <code>i</code>. <br>
+    <code> 
+      for i in ['hai', 'bai', 'oof']:
+        print(i)
+    </code>
+    <h4>While loops</h4>
+    The basic look of a while loop:
+    <code>
+      while condition:<br>
+        code here
+    </code>
+    <br>It operates as long as the condition is true. <code>while True </code> means forever, and is used often for forever loop.
+  </body>
+  <h1>Thanks for reading!</h1>
+  <button onclick = 'window.location.href = "/"'>Back to home</button>
+</html>
