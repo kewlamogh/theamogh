@@ -1,2 +1,2 @@
-run = "python urlmanager.py"
-language = "python"
+language = "python3"
+run = "python main.py"
