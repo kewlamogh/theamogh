@@ -1,2 +1,2 @@
 # theamogh
-## a simple newspaper written by Amogh (@kewlamogh)
+## a simple sorta blog of Amogh (@kewlamogh)
